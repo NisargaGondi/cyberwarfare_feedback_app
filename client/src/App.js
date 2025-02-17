@@ -7,7 +7,7 @@ export default function App() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [error, setError] = useState("");
 
-  const API_URL = "https://feedback-app-server.onrender-1.com";
+  const API_URL = "https://cyberwarfare-feedback-app-1.onrender.com";
 
   useEffect(() => {
     axios.get(`${API_URL}/feedback`)
