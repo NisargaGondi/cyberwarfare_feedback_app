@@ -7,8 +7,10 @@ export default function App() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [error, setError] = useState("");
 
+  const API_URL = "https://feedback-app-server.onrender.com";
+
   useEffect(() => {
-    axios.get("https://cyberwarfare-feedback-app.onrender.com")
+    axios.get(`${API_URL}/feedback`)
       .then(res => setFeedbacks(res.data))
       .catch(err => console.error("Error fetching feedbacks:", err));
   }, []);
@@ -21,7 +23,7 @@ export default function App() {
     }
     setError("");
     const newFeedback = { ...formData, timestamp: new Date().toISOString() };
-    await axios.post("https://cyberwarfare-feedback-app.onrender.com", newFeedback);
+    await axios.post(`${API_URL}/feedback`, newFeedback);
     setFeedbacks([...feedbacks, newFeedback]);
     setFormData({ name: "", email: "", message: "" });
   };
