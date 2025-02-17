@@ -1,0 +1,147 @@
+/* Light Background */
+body {
+  background: linear-gradient(135deg, white, whitesmoke);
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main Container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 50vh;
+  gap: 40px;
+}
+
+/* Flexbox Containers */
+.neon-card, .feedback-section {
+  flex: 0.5;
+  max-width: 50%;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Glassmorphic Form */
+.feedback-form-container {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 360px;
+  max-height: 300px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+/* Glassmorphic Feedback Section */
+.feedback-section {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 0px 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: none;;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover Effect */
+.feedback-form-container:hover, .feedback-section:hover {
+  transform: scale(1.02);
+  transition: 0.4s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  color: #ff5733;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.25); /* Same background as section */
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input Fields */
+.input-field {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  color: black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+}
+
+.textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Submit Button */
+.submit-button {
+  background: linear-gradient(90deg, #ff7f50, #ff4500);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #ff6347, #e63946);
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.6);
+}
+
+/* Vibrant Feedback Cards */
+.neon-feedback {
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternating Gradient Colors */
+.neon-feedback:nth-child(odd) {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.5), rgba(255, 99, 71, 0.5));
+}
+
+.neon-feedback:nth-child(even) {
+  background: linear-gradient(135deg, rgba(173, 216, 230, 0.5), rgba(0, 191, 255, 0.5));
+}
+
+/* Card Hover Effect */
+.neon-feedback:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
