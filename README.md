@@ -9,7 +9,6 @@ A simple feedback web application built with the MERN stack, featuring a user-fr
 - Built using React, Node.js, Express, and MongoDB
 
 ## Live Demo
-[Live Application - Backend](https://cyberwarfare-feedback-app-1.onrender.com)
 [Live Application - Frontend](https://67b44439eb54793180f9d5d6--relaxed-pegasus-043ea6.netlify.app/)
 
 ## Installation & Setup
